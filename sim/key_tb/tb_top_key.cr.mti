@@ -1,0 +1,29 @@
+F:/smart_car/sim/key_tb/key_debounce.v {1 {vlog -work work -vopt -stats=none F:/smart_car/sim/key_tb/key_debounce.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module key_debounce
+
+Top level modules:
+	key_debounce
+
+} {} {}} F:/smart_car/sim/key_tb/top_key.v {1 {vlog -work work -vopt -stats=none F:/smart_car/sim/key_tb/top_key.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module top_key
+
+Top level modules:
+	top_key
+
+} {} {}} F:/smart_car/sim/key_tb/sel_mode_0.v {1 {vlog -work work -vopt -stats=none {F:\smart_car\sim\key_tb\sel_mode_0.v}
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module sel_mode_0
+
+Top level modules:
+	sel_mode_0
+
+} {} {}} F:/smart_car/sim/key_tb/tb_top_key.v {1 {vlog -work work -vopt -stats=none F:/smart_car/sim/key_tb/tb_top_key.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module tb_top_key
+
+Top level modules:
+	tb_top_key
+
+} {} {}}

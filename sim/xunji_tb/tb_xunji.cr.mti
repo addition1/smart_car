@@ -1,0 +1,15 @@
+F:/smart_car/sim/xunji_tb/xunji.v {1 {vlog -work work -vopt -stats=none {F:\smart_car\sim\xunji_tb\xunji.v}
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module xunji
+
+Top level modules:
+	xunji
+
+} {} {}} F:/smart_car/sim/xunji_tb/tb_xunji.v {1 {vlog -work work -vopt -stats=none F:/smart_car/sim/xunji_tb/tb_xunji.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module tb_xunji
+
+Top level modules:
+	tb_xunji
+
+} {} {}}

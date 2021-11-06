@@ -1,0 +1,15 @@
+F:/smart_car/sim/pwm_tb/pwm.v {1 {vlog -work work -vopt -stats=none F:/smart_car/sim/pwm_tb/pwm.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module pwm
+
+Top level modules:
+	pwm
+
+} {} {}} F:/smart_car/sim/pwm_tb/tb_pwm.v {1 {vlog -work work -vopt -stats=none F:/smart_car/sim/pwm_tb/tb_pwm.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module tb_pwm
+
+Top level modules:
+	tb_pwm
+
+} {} {}}

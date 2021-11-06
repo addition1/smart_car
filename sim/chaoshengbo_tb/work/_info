@@ -1,0 +1,107 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dd:/modeltech64_10.4/examples
+vchaoshengbo
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 2>mn3U29JL7i=KfJF[:Fm2
+IWYK`JVf?Mgd3K[CGgAan[0
+Z1 dF:/smart_car/sim/chaoshengbo_tb
+w1589107180
+8F:\smart_car\sim\chaoshengbo_tb\chaoshengbo.v
+FF:\smart_car\sim\chaoshengbo_tb\chaoshengbo.v
+L0 1
+Z2 OL;L;10.4;61
+!s108 1589107189.391000
+!s107 F:\smart_car\sim\chaoshengbo_tb\chaoshengbo.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:\smart_car\sim\chaoshengbo_tb\chaoshengbo.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vClk_1M
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 dDWH^D<^ZbE0[@<b;NMO<2
+IO5Ime`O5AB7^<KOoTcFe=0
+R1
+w1588216474
+8F:/smart_car/sim/chaoshengbo_tb/Clk_1M.v
+FF:/smart_car/sim/chaoshengbo_tb/Clk_1M.v
+L0 1
+R2
+!s108 1589106735.896000
+!s107 F:/smart_car/sim/chaoshengbo_tb/Clk_1M.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/smart_car/sim/chaoshengbo_tb/Clk_1M.v|
+!i113 0
+R3
+n@clk_1@m
+vdianji
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 g@Im^Z`cWmH_MH@Sh6_A51
+IYc7bkMD1nQf]fZc>mPKn@2
+R1
+w1589094314
+8F:/smart_car/sim/chaoshengbo_tb/dianji.v
+FF:/smart_car/sim/chaoshengbo_tb/dianji.v
+L0 1
+R2
+!s108 1589106736.076000
+!s107 F:/smart_car/sim/chaoshengbo_tb/dianji.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/smart_car/sim/chaoshengbo_tb/dianji.v|
+!i113 0
+R3
+vPosCounter
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 Bo9:i[7K5?o`l_:hi@Uj73
+IPRmLnmEBE@ERLeSB[N^`<1
+R1
+w1588217021
+8F:/smart_car/sim/chaoshengbo_tb/PosCounter.v
+FF:/smart_car/sim/chaoshengbo_tb/PosCounter.v
+L0 1
+R2
+!s108 1589106736.246000
+!s107 F:/smart_car/sim/chaoshengbo_tb/PosCounter.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/smart_car/sim/chaoshengbo_tb/PosCounter.v|
+!i113 0
+R3
+n@pos@counter
+vtb_chaoshengbo
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 2jUSSIEnnL5AzeITUFN>g2
+IJR_<bB<h_0@bdd:jYj=mV0
+R1
+w1589107703
+8F:/smart_car/sim/chaoshengbo_tb/tb_chaoshengbo.v
+FF:/smart_car/sim/chaoshengbo_tb/tb_chaoshengbo.v
+L0 3
+R2
+!s108 1589107835.067000
+!s107 F:/smart_car/sim/chaoshengbo_tb/tb_chaoshengbo.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/smart_car/sim/chaoshengbo_tb/tb_chaoshengbo.v|
+!i113 0
+R3

@@ -1,0 +1,23 @@
+module Clk_1M( 
+input clk_in, 
+input  rst,
+output  clk_out);
+reg [5:0] counter;
+reg wave;
+assign clk_out = wave;
+always @(posedge clk_in or negedge rst) begin
+    if (!rst)
+        counter <= 6'd0;
+    else if (counter < 6'd50)
+        counter <= counter + 1'b1;
+    else
+        counter <= 6'd0;
+end
+
+always @(posedge clk_in) begin
+if(counter<25)
+ wave <= 1;
+else 
+ wave <= 0;
+ end 
+endmodule

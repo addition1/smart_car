@@ -1,0 +1,110 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+# Date created = 20:01:59  April 22, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		smart_car_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6E22C8
+set_global_assignment -name TOP_LEVEL_ENTITY top_smart_car
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:01:59  APRIL 22, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_38 -to D2
+set_location_assignment PIN_39 -to D3
+set_location_assignment PIN_64 -to Echo
+set_location_assignment PIN_65 -to Trig
+set_location_assignment PIN_101 -to led[3]
+set_location_assignment PIN_103 -to led[2]
+set_location_assignment PIN_104 -to led[1]
+set_location_assignment PIN_51 -to motor[3]
+set_location_assignment PIN_52 -to motor[2]
+set_location_assignment PIN_53 -to motor[1]
+set_location_assignment PIN_54 -to motor[0]
+set_location_assignment PIN_32 -to remote_in
+set_location_assignment PIN_91 -to sys_clk
+set_location_assignment PIN_105 -to led[0]
+set_location_assignment PIN_43 -to D1
+set_location_assignment PIN_44 -to D4
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_NCE_PIN OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DATA0_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_DATA1_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_FLASH_NCE_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_DCLK_AFTER_CONFIGURATION "USE AS PROGRAMMING PIN"
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_location_assignment PIN_73 -to key3
+set_location_assignment PIN_76 -to key0
+set_location_assignment PIN_75 -to key1
+set_location_assignment PIN_74 -to key2
+set_global_assignment -name SDC_FILE smart_car.sdc
+set_global_assignment -name VERILOG_FILE ../rtl/sel_mode_0.v
+set_global_assignment -name VERILOG_FILE ../rtl/key_debounce.v
+set_global_assignment -name VERILOG_FILE ../rtl/top_smart_car.v
+set_global_assignment -name VERILOG_FILE ../rtl/key_pwm.v
+set_global_assignment -name VERILOG_FILE ../rtl/remote_ctrl.v
+set_global_assignment -name VERILOG_FILE ../rtl/xunji.v
+set_global_assignment -name VERILOG_FILE ../rtl/TrigSignal.v
+set_global_assignment -name VERILOG_FILE ../rtl/remote_rcv.v
+set_global_assignment -name VERILOG_FILE ../rtl/pwm.v
+set_global_assignment -name VERILOG_FILE ../rtl/PosCounter.v
+set_global_assignment -name VERILOG_FILE ../rtl/dianji.v
+set_global_assignment -name VERILOG_FILE ../rtl/Clk_1M.v
+set_global_assignment -name VERILOG_FILE ../rtl/mux4_1.v
+set_global_assignment -name VERILOG_FILE ../rtl/sel_mode.v
+set_global_assignment -name VERILOG_FILE ../rtl/gensui.v
+set_global_assignment -name VERILOG_FILE ../rtl/data_separate.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

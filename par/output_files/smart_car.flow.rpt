@@ -1,0 +1,135 @@
+Flow report for smart_car
+Thu Jun 11 12:13:46 2020
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Thu Jun 11 12:13:46 2020       ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
+; Revision Name                      ; smart_car                                   ;
+; Top-level Entity Name              ; top_smart_car                               ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE6E22C8                                 ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 780 / 6,272 ( 12 % )                        ;
+;     Total combinational functions  ; 762 / 6,272 ( 12 % )                        ;
+;     Dedicated logic registers      ; 351 / 6,272 ( 6 % )                         ;
+; Total registers                    ; 351                                         ;
+; Total pins                         ; 21 / 92 ( 23 % )                            ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 06/11/2020 12:12:46 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; smart_car           ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                             ;
++-------------------------------------+---------------------------------------+---------------+---------------+----------------+
+; Assignment Name                     ; Value                                 ; Default Value ; Entity Name   ; Section Id     ;
++-------------------------------------+---------------------------------------+---------------+---------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 115410743568946.159184876614744       ; --            ; --            ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --            ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim (Verilog)                    ; <None>        ; --            ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                  ; --            ; --            ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --            ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --            ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                     ; --            ; --            ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                     ; --            ; --            ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                            ; --            ; --            ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                            ; --            ; --            ; --             ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; top_smart_car ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; top_smart_car ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; top_smart_car ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --            ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --            ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --            ; --             ;
+; TOP_LEVEL_ENTITY                    ; top_smart_car                         ; smart_car     ; --            ; --             ;
++-------------------------------------+---------------------------------------+---------------+---------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:07     ; 1.0                     ; 4637 MB             ; 00:00:06                           ;
+; Fitter                    ; 00:00:27     ; 1.0                     ; 5200 MB             ; 00:00:19                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4593 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 4658 MB             ; 00:00:06                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4566 MB             ; 00:00:03                           ;
+; Total                     ; 00:00:46     ; --                      ; --                  ; 00:00:36                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-TLVB34N  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-TLVB34N  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-TLVB34N  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-TLVB34N  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-TLVB34N  ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off smart_car -c smart_car
+quartus_fit --read_settings_files=off --write_settings_files=off smart_car -c smart_car
+quartus_asm --read_settings_files=off --write_settings_files=off smart_car -c smart_car
+quartus_sta smart_car -c smart_car
+quartus_eda --read_settings_files=off --write_settings_files=off smart_car -c smart_car
+
+
+

@@ -1,0 +1,21 @@
+//工作模式选择
+module sel_mode(
+input clk,
+input rst_n,
+input [7:0] data,
+output  [1:0] sel 
+);
+
+reg [1:0] select;
+always @(data) begin
+case(data)
+8'b69: select=2'b00;
+8'b70: select=2'b01;
+8'b71: select=2'b10;
+8'b68: select=2'b11;
+default:;
+endcase
+end
+assign sel=select;
+
+endmodule

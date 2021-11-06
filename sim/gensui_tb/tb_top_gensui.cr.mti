@@ -1,0 +1,15 @@
+F:/smart_car/sim/gensui_tb/gensui.v {1 {vlog -work work -vopt -stats=none F:/smart_car/sim/gensui_tb/gensui.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module gensui
+
+Top level modules:
+	gensui
+
+} {} {}} F:/smart_car/sim/gensui_tb/tb_top_gensui.v {1 {vlog -work work -vopt -stats=none F:/smart_car/sim/gensui_tb/tb_top_gensui.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module tb_top_gensui
+
+Top level modules:
+	tb_top_gensui
+
+} {} {}}

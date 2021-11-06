@@ -1,0 +1,29 @@
+F:/smart_car/sim/chaoshengbo_tb/chaoshengbo.v {1 {vlog -work work -vopt -stats=none {F:\smart_car\sim\chaoshengbo_tb\chaoshengbo.v}
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module chaoshengbo
+
+Top level modules:
+	chaoshengbo
+
+} {} {}} F:/smart_car/sim/chaoshengbo_tb/PosCounter.v {1 {vlog -work work -vopt -stats=none F:/smart_car/sim/chaoshengbo_tb/PosCounter.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module PosCounter
+
+Top level modules:
+	PosCounter
+
+} {} {}} F:/smart_car/sim/chaoshengbo_tb/Clk_1M.v {1 {vlog -work work -vopt -stats=none F:/smart_car/sim/chaoshengbo_tb/Clk_1M.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module Clk_1M
+
+Top level modules:
+	Clk_1M
+
+} {} {}} F:/smart_car/sim/chaoshengbo_tb/dianji.v {1 {vlog -work work -vopt -stats=none F:/smart_car/sim/chaoshengbo_tb/dianji.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module dianji
+
+Top level modules:
+	dianji
+
+} {} {}}

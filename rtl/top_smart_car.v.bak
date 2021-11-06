@@ -1,0 +1,95 @@
+module top_smart_car(
+    input             sys_clk  ,    //系统时钟 
+    input             sys_rst_n,    //系统复位信号，低电平有效
+    input             remote_in,    //红外遥控接收信号
+	 input             D2,D3,        //红外循迹接收信号
+	 input             Echo,
+	 
+    output  [3:0]     motor,
+    output            Trig,
+	 output  [3:0]      led
+);
+
+//wire define
+wire  [7:0]   data_mode,         //工作模式
+wire  [7:0]   data_pwm,         //调速
+wire  [7:0]   data_move,         //红外遥控移动
+wire   pwm;
+wire  [12:0] mod;
+wire  clk_1m;
+wire  [19:0] dis; // 回波高电平持续时间us
+wire  [1:0] sel;
+wire  [3:0]     motor_0,motor_1,motor_2;
+//*****************************************************
+//**                    main code
+//*****************************************************
+
+//红外遥控控制模块
+remote_ctrl u_remote_ctrl(
+    .clk            (sys_clk),   
+    .rst_n          (sys_rst_n),
+    .data           (data_move),           //红外数据
+    .motor          (motor_0)
+	 .pwm            (pwm)
+    );
+
+//HS0038B驱动模块
+remote_rcv u_remote_rcv(               
+    .sys_clk        (sys_clk),  
+    .sys_rst_n      (sys_rst_n),    
+    .remote_in      (remote_in),
+    .repeat_en      (),                
+    .data_en        (),
+    .data_mode      (data_mode),
+	 .data_pwm       (data_pwm),
+	 .data_move      (data_move)
+    );
+	 
+key_pwm  u_key_pwm(
+    .sys_clk         (sys_clk)    ,    //50Mhz系统时钟
+    .sys_rst_n        (sys_rst_n)     ,    //系统复位，低有效
+    .key             (data_pwm)  ,             
+    .mod     (mod)
+    );
+pwm u_pwm(
+.clk(sys_clk),
+.pulse_width(mod),
+.out  (pwm)
+);
+
+xunji u_xunji(
+.clk (sys_clk),
+.rst_n (sys_rst_n),
+.D2 (D2),
+.D3  (D3),
+.pwm (pwm),
+.motor (motor_1)
+);
+
+Clk_1M u_0(.clk_out(clk_1m), .clk_in(sys_clk), .rst(sys_rst_n)); // 50分频
+TrigSignal u_1(.clk_1m(clk_1m), .rst(rst), .trig(Trig));
+PosCounter u_2(.clk_1m(clk_1m), .rst(rst), .echo(Echo), .dis_count(dis));
+dianji u_3(
+   .clk   (clk_1m) ,  
+   .rst_n  (rst),      
+   .disten  (dis),     
+	.motor (motor_2),
+	.pwm (pwm) 
+    );
+	 
+sel_mode u_sel_mode(
+.clk (sys_clk),
+.rst_n (sys_rst_n),
+.data (data_mode),
+.sel  (sel),
+.led (led)
+);
+
+mux4_1 u_mux4_1(
+.out (motor),
+.in0 (motor_0),
+.in1 (motor_1),
+.in2 (motor_2),
+.in3 (),
+.sel (sel));
+endmodule

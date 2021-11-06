@@ -1,0 +1,29 @@
+F:/smart_car/sim/sel_mode_tb/mux4_1.v {1 {vlog -work work -vopt -stats=none F:/smart_car/sim/sel_mode_tb/mux4_1.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module mux4_1
+
+Top level modules:
+	mux4_1
+
+} {} {}} F:/smart_car/sim/sel_mode_tb/sel_mode_top.v {1 {vlog -work work -vopt -stats=none F:/smart_car/sim/sel_mode_tb/sel_mode_top.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module sel_mode_top
+
+Top level modules:
+	sel_mode_top
+
+} {} {}} F:/smart_car/sim/sel_mode_tb/sel_mode.v {1 {vlog -work work -vopt -stats=none {F:\smart_car\sim\sel_mode_tb\sel_mode.v}
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module sel_mode
+
+Top level modules:
+	sel_mode
+
+} {} {}} F:/smart_car/sim/sel_mode_tb/sel_mode_tb.v {1 {vlog -work work -vopt -stats=none F:/smart_car/sim/sel_mode_tb/sel_mode_tb.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module sel_mode_tb
+
+Top level modules:
+	sel_mode_tb
+
+} {} {}}

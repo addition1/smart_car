@@ -1,0 +1,579 @@
+Analysis & Synthesis report for smart_car
+Thu Jun 11 12:12:52 2020
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |top_smart_car|dianji:u_3|cur_state
+  9. State Machine - |top_smart_car|PosCounter:u_2|curr_state
+ 10. State Machine - |top_smart_car|remote_rcv:u_remote_rcv|cur_state
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: remote_rcv:u_remote_rcv
+ 16. Parameter Settings for User Entity Instance: PosCounter:u_2
+ 17. Parameter Settings for User Entity Instance: dianji:u_3
+ 18. Parameter Settings for Inferred Entity Instance: PosCounter:u_2|lpm_divide:Div0
+ 19. Port Connectivity Checks: "remote_rcv:u_remote_rcv"
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+ 22. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Jun 11 12:12:52 2020       ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
+; Revision Name                      ; smart_car                                   ;
+; Top-level Entity Name              ; top_smart_car                               ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 796                                         ;
+;     Total combinational functions  ; 762                                         ;
+;     Dedicated logic registers      ; 351                                         ;
+; Total registers                    ; 351                                         ;
+; Total pins                         ; 21                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE6E22C8        ;                    ;
+; Top-level entity name                                                      ; top_smart_car      ; smart_car          ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+; ../rtl/sel_mode_0.v              ; yes             ; User Verilog HDL File        ; F:/smart_car/rtl/sel_mode_0.v                                      ;         ;
+; ../rtl/key_debounce.v            ; yes             ; User Verilog HDL File        ; F:/smart_car/rtl/key_debounce.v                                    ;         ;
+; ../rtl/top_smart_car.v           ; yes             ; User Verilog HDL File        ; F:/smart_car/rtl/top_smart_car.v                                   ;         ;
+; ../rtl/key_pwm.v                 ; yes             ; User Verilog HDL File        ; F:/smart_car/rtl/key_pwm.v                                         ;         ;
+; ../rtl/remote_ctrl.v             ; yes             ; User Verilog HDL File        ; F:/smart_car/rtl/remote_ctrl.v                                     ;         ;
+; ../rtl/xunji.v                   ; yes             ; User Verilog HDL File        ; F:/smart_car/rtl/xunji.v                                           ;         ;
+; ../rtl/TrigSignal.v              ; yes             ; User Verilog HDL File        ; F:/smart_car/rtl/TrigSignal.v                                      ;         ;
+; ../rtl/remote_rcv.v              ; yes             ; User Verilog HDL File        ; F:/smart_car/rtl/remote_rcv.v                                      ;         ;
+; ../rtl/pwm.v                     ; yes             ; User Verilog HDL File        ; F:/smart_car/rtl/pwm.v                                             ;         ;
+; ../rtl/PosCounter.v              ; yes             ; User Verilog HDL File        ; F:/smart_car/rtl/PosCounter.v                                      ;         ;
+; ../rtl/dianji.v                  ; yes             ; User Verilog HDL File        ; F:/smart_car/rtl/dianji.v                                          ;         ;
+; ../rtl/Clk_1M.v                  ; yes             ; User Verilog HDL File        ; F:/smart_car/rtl/Clk_1M.v                                          ;         ;
+; ../rtl/mux4_1.v                  ; yes             ; User Verilog HDL File        ; F:/smart_car/rtl/mux4_1.v                                          ;         ;
+; ../rtl/sel_mode.v                ; yes             ; User Verilog HDL File        ; F:/smart_car/rtl/sel_mode.v                                        ;         ;
+; ../rtl/gensui.v                  ; yes             ; User Verilog HDL File        ; F:/smart_car/rtl/gensui.v                                          ;         ;
+; ../rtl/data_separate.v           ; yes             ; User Verilog HDL File        ; F:/smart_car/rtl/data_separate.v                                   ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc      ;         ;
+; db/lpm_divide_vim.tdf            ; yes             ; Auto-Generated Megafunction  ; F:/smart_car/par/db/lpm_divide_vim.tdf                             ;         ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; F:/smart_car/par/db/sign_div_unsign_nlh.tdf                        ;         ;
+; db/alt_u_div_27f.tdf             ; yes             ; Auto-Generated Megafunction  ; F:/smart_car/par/db/alt_u_div_27f.tdf                              ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; F:/smart_car/par/db/add_sub_7pc.tdf                                ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; F:/smart_car/par/db/add_sub_8pc.tdf                                ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 796             ;
+;                                             ;                 ;
+; Total combinational functions               ; 762             ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 234             ;
+;     -- 3 input functions                    ; 133             ;
+;     -- <=2 input functions                  ; 395             ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 452             ;
+;     -- arithmetic mode                      ; 310             ;
+;                                             ;                 ;
+; Total registers                             ; 351             ;
+;     -- Dedicated logic registers            ; 351             ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 21              ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+; Maximum fan-out node                        ; sys_rst_n~input ;
+; Maximum fan-out                             ; 324             ;
+; Total fan-out                               ; 3600            ;
+; Average fan-out                             ; 3.12            ;
++---------------------------------------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                  ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |top_smart_car                            ; 762 (1)           ; 351 (0)      ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |top_smart_car                                                                                                                ; work         ;
+;    |Clk_1M:u_0|                           ; 10 (10)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|Clk_1M:u_0                                                                                                     ; work         ;
+;    |PosCounter:u_2|                       ; 299 (46)          ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|PosCounter:u_2                                                                                                 ; work         ;
+;       |lpm_divide:Div0|                   ; 253 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|PosCounter:u_2|lpm_divide:Div0                                                                                 ; work         ;
+;          |lpm_divide_vim:auto_generated|  ; 253 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|PosCounter:u_2|lpm_divide:Div0|lpm_divide_vim:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 253 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|PosCounter:u_2|lpm_divide:Div0|lpm_divide_vim:auto_generated|sign_div_unsign_nlh:divider                       ; work         ;
+;                |alt_u_div_27f:divider|    ; 253 (253)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|PosCounter:u_2|lpm_divide:Div0|lpm_divide_vim:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_27f:divider ; work         ;
+;    |TrigSignal:u_1|                       ; 38 (38)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|TrigSignal:u_1                                                                                                 ; work         ;
+;    |data_separate:u_data_separate|        ; 14 (14)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|data_separate:u_data_separate                                                                                  ; work         ;
+;    |dianji:u_3|                           ; 59 (59)           ; 39 (39)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|dianji:u_3                                                                                                     ; work         ;
+;    |gensui:u_gensui|                      ; 3 (3)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|gensui:u_gensui                                                                                                ; work         ;
+;    |key_debounce:u_key_debounce|          ; 188 (188)         ; 140 (140)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|key_debounce:u_key_debounce                                                                                    ; work         ;
+;    |key_pwm:u_key_pwm|                    ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|key_pwm:u_key_pwm                                                                                              ; work         ;
+;    |mux4_1:u_mux4_1|                      ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|mux4_1:u_mux4_1                                                                                                ; work         ;
+;    |pwm:u_pwm|                            ; 24 (24)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|pwm:u_pwm                                                                                                      ; work         ;
+;    |remote_ctrl:u_remote_ctrl|            ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|remote_ctrl:u_remote_ctrl                                                                                      ; work         ;
+;    |remote_rcv:u_remote_rcv|              ; 100 (100)         ; 62 (62)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|remote_rcv:u_remote_rcv                                                                                        ; work         ;
+;    |sel_mode:u_sel_mode|                  ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|sel_mode:u_sel_mode                                                                                            ; work         ;
+;    |sel_mode_0:u_sel_mode_0|              ; 5 (5)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|sel_mode_0:u_sel_mode_0                                                                                        ; work         ;
+;    |xunji:u_xunji|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_smart_car|xunji:u_xunji                                                                                                  ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------+
+; State Machine - |top_smart_car|dianji:u_3|cur_state                      ;
++--------------+--------------+--------------+--------------+--------------+
+; Name         ; cur_state.s3 ; cur_state.s2 ; cur_state.s1 ; cur_state.s0 ;
++--------------+--------------+--------------+--------------+--------------+
+; cur_state.s0 ; 0            ; 0            ; 0            ; 0            ;
+; cur_state.s1 ; 0            ; 0            ; 1            ; 1            ;
+; cur_state.s2 ; 0            ; 1            ; 0            ; 1            ;
+; cur_state.s3 ; 1            ; 0            ; 0            ; 1            ;
++--------------+--------------+--------------+--------------+--------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------+
+; State Machine - |top_smart_car|PosCounter:u_2|curr_state      ;
++---------------+---------------+---------------+---------------+
+; Name          ; curr_state.S0 ; curr_state.S2 ; curr_state.S1 ;
++---------------+---------------+---------------+---------------+
+; curr_state.S0 ; 0             ; 0             ; 0             ;
+; curr_state.S1 ; 1             ; 0             ; 1             ;
+; curr_state.S2 ; 1             ; 1             ; 0             ;
++---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_smart_car|remote_rcv:u_remote_rcv|cur_state                                                                                          ;
++----------------------------+--------------------------+-----------------------+--------------------------+----------------------------+-------------------+
+; Name                       ; cur_state.st_repeat_code ; cur_state.st_rec_data ; cur_state.st_start_judge ; cur_state.st_start_low_9ms ; cur_state.st_idle ;
++----------------------------+--------------------------+-----------------------+--------------------------+----------------------------+-------------------+
+; cur_state.st_idle          ; 0                        ; 0                     ; 0                        ; 0                          ; 0                 ;
+; cur_state.st_start_low_9ms ; 0                        ; 0                     ; 0                        ; 1                          ; 1                 ;
+; cur_state.st_start_judge   ; 0                        ; 0                     ; 1                        ; 0                          ; 1                 ;
+; cur_state.st_rec_data      ; 0                        ; 1                     ; 0                        ; 0                          ; 1                 ;
+; cur_state.st_repeat_code   ; 1                        ; 0                     ; 0                        ; 0                          ; 1                 ;
++----------------------------+--------------------------+-----------------------+--------------------------+----------------------------+-------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                      ;
++------------------------------------------------+--------------------------------------------------------+
+; Register name                                  ; Reason for Removal                                     ;
++------------------------------------------------+--------------------------------------------------------+
+; gensui:u_gensui|IN3                            ; Stuck at GND due to stuck port data_in                 ;
+; gensui:u_gensui|IN2                            ; Stuck at GND due to stuck port data_in                 ;
+; key_pwm:u_key_pwm|speedmod[0,12]               ; Stuck at GND due to stuck port data_in                 ;
+; key_pwm:u_key_pwm|speedmod[7,8]                ; Stuck at VCC due to stuck port data_in                 ;
+; key_pwm:u_key_pwm|speedmod[1]                  ; Stuck at GND due to stuck port data_in                 ;
+; key_debounce:u_key_debounce|key_reg0[1..3]     ; Stuck at GND due to stuck port data_in                 ;
+; key_debounce:u_key_debounce|key_reg1[1..3]     ; Stuck at GND due to stuck port data_in                 ;
+; key_debounce:u_key_debounce|key_reg2[1..3]     ; Stuck at GND due to stuck port data_in                 ;
+; key_debounce:u_key_debounce|key_reg3[1..3]     ; Stuck at GND due to stuck port data_in                 ;
+; data_separate:u_data_separate|data_pwm[5..7]   ; Stuck at GND due to stuck port data_in                 ;
+; data_separate:u_data_separate|data_mode[2]     ; Stuck at VCC due to stuck port data_in                 ;
+; data_separate:u_data_separate|data_mode[3..5]  ; Stuck at GND due to stuck port data_in                 ;
+; data_separate:u_data_separate|data_mode[6]     ; Stuck at VCC due to stuck port data_in                 ;
+; data_separate:u_data_separate|data_mode[7]     ; Stuck at GND due to stuck port data_in                 ;
+; data_separate:u_data_separate|data_move[0,5,7] ; Stuck at GND due to stuck port data_in                 ;
+; key_pwm:u_key_pwm|speedmod[2,4,9]              ; Merged with key_pwm:u_key_pwm|speedmod[11]             ;
+; key_pwm:u_key_pwm|speedmod[3]                  ; Merged with key_pwm:u_key_pwm|speedmod[5]              ;
+; remote_ctrl:u_remote_ctrl|IN2                  ; Merged with remote_ctrl:u_remote_ctrl|IN3              ;
+; data_separate:u_data_separate|data_move[6]     ; Merged with data_separate:u_data_separate|data_move[1] ;
+; data_separate:u_data_separate|data_pwm[3]      ; Merged with data_separate:u_data_separate|data_pwm[0]  ;
+; PosCounter:u_2|dis_reg[1]                      ; Lost fanout                                            ;
+; key_pwm:u_key_pwm|speedmod[5]                  ; Merged with key_pwm:u_key_pwm|speedmod[6]              ;
+; Total Number of Removed Registers = 40         ;                                                        ;
++------------------------------------------------+--------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 351   ;
+; Number of registers using Synchronous Clear  ; 54    ;
+; Number of registers using Synchronous Load   ; 128   ;
+; Number of registers using Asynchronous Clear ; 320   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 188   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; sel_mode:u_sel_mode|led[1]              ; 1       ;
+; sel_mode:u_sel_mode|led[2]              ; 1       ;
+; sel_mode:u_sel_mode|led[3]              ; 1       ;
+; key_pwm:u_key_pwm|speedmod[11]          ; 2       ;
+; key_pwm:u_key_pwm|speedmod[6]           ; 1       ;
+; key_debounce:u_key_debounce|key_value0  ; 3       ;
+; key_debounce:u_key_debounce|key_value1  ; 3       ;
+; key_debounce:u_key_debounce|key_value2  ; 2       ;
+; key_debounce:u_key_debounce|key_value3  ; 2       ;
+; dianji:u_3|time_cnt_clr                 ; 28      ;
+; key_debounce:u_key_debounce|key_reg0[0] ; 2       ;
+; key_debounce:u_key_debounce|key_reg1[0] ; 2       ;
+; key_debounce:u_key_debounce|key_reg2[0] ; 2       ;
+; key_debounce:u_key_debounce|key_reg3[0] ; 2       ;
+; Total number of inverted registers = 14 ;         ;
++-----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |top_smart_car|TrigSignal:u_1|count[19]                   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_smart_car|key_debounce:u_key_debounce|delay_cnt3[1]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_smart_car|key_debounce:u_key_debounce|delay_cnt2[5]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_smart_car|key_debounce:u_key_debounce|delay_cnt1[29] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_smart_car|key_debounce:u_key_debounce|delay_cnt0[2]  ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_smart_car|remote_rcv:u_remote_rcv|data_cnt[3]        ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |top_smart_car|sel_mode:u_sel_mode|led[0]                 ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |top_smart_car|sel_mode_0:u_sel_mode_0|sel_type[1]        ;
+; 7:1                ; 15 bits   ; 60 LEs        ; 15 LEs               ; 45 LEs                 ; Yes        ; |top_smart_car|remote_rcv:u_remote_rcv|data_temp[7]       ;
+; 256:1              ; 4 bits    ; 680 LEs       ; 12 LEs               ; 668 LEs                ; Yes        ; |top_smart_car|data_separate:u_data_separate|data_move[1] ;
+; 256:1              ; 4 bits    ; 680 LEs       ; 8 LEs                ; 672 LEs                ; Yes        ; |top_smart_car|data_separate:u_data_separate|data_pwm[1]  ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |top_smart_car|sel_mode:u_sel_mode|led[1]                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_smart_car|mux4_1:u_mux4_1|Mux2                       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_smart_car|remote_rcv:u_remote_rcv|time_done          ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; No         ; |top_smart_car|PosCounter:u_2|Selector2                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: remote_rcv:u_remote_rcv ;
++------------------+-------+-------------------------------------------+
+; Parameter Name   ; Value ; Type                                      ;
++------------------+-------+-------------------------------------------+
+; st_idle          ; 00001 ; Unsigned Binary                           ;
+; st_start_low_9ms ; 00010 ; Unsigned Binary                           ;
+; st_start_judge   ; 00100 ; Unsigned Binary                           ;
+; st_rec_data      ; 01000 ; Unsigned Binary                           ;
+; st_repeat_code   ; 10000 ; Unsigned Binary                           ;
++------------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PosCounter:u_2 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; S0             ; 00    ; Unsigned Binary                    ;
+; S1             ; 01    ; Unsigned Binary                    ;
+; S2             ; 10    ; Unsigned Binary                    ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: dianji:u_3 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; s0             ; 0001  ; Unsigned Binary                ;
+; s1             ; 0010  ; Unsigned Binary                ;
+; s2             ; 0100  ; Unsigned Binary                ;
+; s3             ; 1000  ; Unsigned Binary                ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: PosCounter:u_2|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                               ;
+; LPM_WIDTHD             ; 6              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_vim ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "remote_rcv:u_remote_rcv"    ;
++-----------+--------+----------+------------------------+
+; Port      ; Type   ; Severity ; Details                ;
++-----------+--------+----------+------------------------+
+; repeat_en ; Output ; Info     ; Explicitly unconnected ;
+; data_en   ; Output ; Info     ; Explicitly unconnected ;
++-----------+--------+----------+------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+    Info: Processing started: Thu Jun 11 12:12:45 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off smart_car -c smart_car
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file /smart_car/rtl/sel_mode_0.v
+    Info (12023): Found entity 1: sel_mode_0
+Info (12021): Found 1 design units, including 1 entities, in source file /smart_car/rtl/key_debounce.v
+    Info (12023): Found entity 1: key_debounce
+Info (12021): Found 1 design units, including 1 entities, in source file /smart_car/rtl/top_smart_car.v
+    Info (12023): Found entity 1: top_smart_car
+Info (12021): Found 1 design units, including 1 entities, in source file /smart_car/rtl/key_pwm.v
+    Info (12023): Found entity 1: key_pwm
+Info (12021): Found 1 design units, including 1 entities, in source file /smart_car/rtl/remote_ctrl.v
+    Info (12023): Found entity 1: remote_ctrl
+Info (12021): Found 1 design units, including 1 entities, in source file /smart_car/rtl/xunji.v
+    Info (12023): Found entity 1: xunji
+Info (12021): Found 1 design units, including 1 entities, in source file /smart_car/rtl/trigsignal.v
+    Info (12023): Found entity 1: TrigSignal
+Info (12021): Found 1 design units, including 1 entities, in source file /smart_car/rtl/remote_rcv.v
+    Info (12023): Found entity 1: remote_rcv
+Info (12021): Found 1 design units, including 1 entities, in source file /smart_car/rtl/pwm.v
+    Info (12023): Found entity 1: pwm
+Info (12021): Found 1 design units, including 1 entities, in source file /smart_car/rtl/poscounter.v
+    Info (12023): Found entity 1: PosCounter
+Info (12021): Found 1 design units, including 1 entities, in source file /smart_car/rtl/dianji.v
+    Info (12023): Found entity 1: dianji
+Info (12021): Found 1 design units, including 1 entities, in source file /smart_car/rtl/clk_1m.v
+    Info (12023): Found entity 1: Clk_1M
+Info (12021): Found 1 design units, including 1 entities, in source file /smart_car/rtl/mux4_1.v
+    Info (12023): Found entity 1: mux4_1
+Info (12021): Found 1 design units, including 1 entities, in source file /smart_car/rtl/sel_mode.v
+    Info (12023): Found entity 1: sel_mode
+Info (12021): Found 1 design units, including 1 entities, in source file /smart_car/rtl/gensui.v
+    Info (12023): Found entity 1: gensui
+Info (12021): Found 1 design units, including 1 entities, in source file /smart_car/rtl/data_separate.v
+    Info (12023): Found entity 1: data_separate
+Info (12127): Elaborating entity "top_smart_car" for the top level hierarchy
+Info (12128): Elaborating entity "remote_ctrl" for hierarchy "remote_ctrl:u_remote_ctrl"
+Info (12128): Elaborating entity "remote_rcv" for hierarchy "remote_rcv:u_remote_rcv"
+Info (12128): Elaborating entity "data_separate" for hierarchy "data_separate:u_data_separate"
+Info (12128): Elaborating entity "key_debounce" for hierarchy "key_debounce:u_key_debounce"
+Info (12128): Elaborating entity "key_pwm" for hierarchy "key_pwm:u_key_pwm"
+Info (12128): Elaborating entity "pwm" for hierarchy "pwm:u_pwm"
+Info (12128): Elaborating entity "xunji" for hierarchy "xunji:u_xunji"
+Info (12128): Elaborating entity "Clk_1M" for hierarchy "Clk_1M:u_0"
+Info (12128): Elaborating entity "TrigSignal" for hierarchy "TrigSignal:u_1"
+Info (12128): Elaborating entity "PosCounter" for hierarchy "PosCounter:u_2"
+Info (12128): Elaborating entity "dianji" for hierarchy "dianji:u_3"
+Info (12128): Elaborating entity "gensui" for hierarchy "gensui:u_gensui"
+Info (12128): Elaborating entity "sel_mode" for hierarchy "sel_mode:u_sel_mode"
+Info (12128): Elaborating entity "sel_mode_0" for hierarchy "sel_mode_0:u_sel_mode_0"
+Info (12128): Elaborating entity "mux4_1" for hierarchy "mux4_1:u_mux4_1"
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PosCounter:u_2|Div0"
+Info (12130): Elaborated megafunction instantiation "PosCounter:u_2|lpm_divide:Div0"
+Info (12133): Instantiated megafunction "PosCounter:u_2|lpm_divide:Div0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vim.tdf
+    Info (12023): Found entity 1: lpm_divide_vim
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_nlh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_27f.tdf
+    Info (12023): Found entity 1: alt_u_div_27f
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file F:/smart_car/par/output_files/smart_car.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 818 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 797 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4645 megabytes
+    Info: Processing ended: Thu Jun 11 12:12:52 2020
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in F:/smart_car/par/output_files/smart_car.map.smsg.
+
+

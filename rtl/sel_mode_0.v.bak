@@ -1,0 +1,55 @@
+//工作模式选择（按键操作）
+module sel_mode(
+input clk,
+input rst_n,
+input        key_value,	//消抖后的按键信号
+input        key_flag,    //按键有效信号
+output  [1:0] sel, 
+output reg [3:0] led,
+output  [7:0]   sel_pwm         //调速
+);
+reg [1:0] select;
+reg  [7:0] pwm;
+always @(posedge clk or negedge rst_n) begin
+if(!rst_n)
+	led <=4'b1110;
+else if(key_flag && key_value==1110)  //判断按键是否有效按下
+	begin 
+	select<=2'b00;
+	led <=4'b1110;
+	end 
+else if(key_flag && key_value==1101)  //判断按键是否有效按下
+    begin
+	select<=2'b01;
+	led <=4'b1101;
+	end
+else if(key_flag && key_value==1011)  //判断按键是否有效按下
+    begin
+	select<=2'b10;
+	led <=4'b1011;
+	end
+else if(key_flag && key_value==0111)  //判断按键是否有效按下
+    begin
+	select<=2'b11;
+	led <=4'b0111;
+	end
+else if(key_flag && key_value==1100)  //判断按键是否有效按下
+    begin
+	pwm<=8'd22;
+	end
+else if(key_flag && key_value==1010)  //判断按键是否有效按下
+    begin
+	pwm<=8'd25;
+	end
+else if(key_flag && key_value==0110)  //判断按键是否有效按下
+    begin
+	pwm<=8'd13;
+	end
+	else;
+	
+end 
+end
+assign sel=select;
+assign sel_pwm=pwm;
+
+endmodule

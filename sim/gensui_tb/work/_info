@@ -1,0 +1,48 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dd:/modeltech64_10.4/examples
+vgensui
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 DV>l22?hV=?QF8DhUJPW31
+IEZ_[P;fe8BB;5Z``FPbWb1
+Z1 dF:/smart_car/sim/gensui_tb
+w1589078282
+8F:/smart_car/sim/gensui_tb/gensui.v
+FF:/smart_car/sim/gensui_tb/gensui.v
+L0 1
+Z2 OL;L;10.4;61
+!s108 1589078567.065000
+!s107 F:/smart_car/sim/gensui_tb/gensui.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/smart_car/sim/gensui_tb/gensui.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vtb_top_gensui
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 TZiXFFSdTgab8CXL8G8I?1
+I_cJiZE>6hO@[Z9=7UKlL13
+R1
+w1589078462
+8F:/smart_car/sim/gensui_tb/tb_top_gensui.v
+FF:/smart_car/sim/gensui_tb/tb_top_gensui.v
+L0 3
+R2
+!s108 1589078572.234000
+!s107 F:/smart_car/sim/gensui_tb/tb_top_gensui.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/smart_car/sim/gensui_tb/tb_top_gensui.v|
+!i113 0
+R3

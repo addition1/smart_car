@@ -1,0 +1,15 @@
+F:/smart_car/sim/hongwai_tb/remote_rcv.v {1 {vlog -work work -vopt -stats=none F:/smart_car/sim/hongwai_tb/remote_rcv.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module remote_rcv
+
+Top level modules:
+	remote_rcv
+
+} {} {}} F:/smart_car/sim/hongwai_tb/remote_rcv_tb.v {1 {vlog -work work -vopt -stats=none F:/smart_car/sim/hongwai_tb/remote_rcv_tb.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module remote_rcv_tb
+
+Top level modules:
+	remote_rcv_tb
+
+} {} {}}

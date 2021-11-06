@@ -1,0 +1,86 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dF:/fpga_car/sim
+vkey_debounce
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 3ZLDjYDKFahm<<27_Y7Xa0
+In[l6MU>E7<B?0O0O[hlY_0
+Z1 dF:/smart_car/sim/key_tb
+w1589252401
+8F:/smart_car/sim/key_tb/key_debounce.v
+FF:/smart_car/sim/key_tb/key_debounce.v
+L0 1
+Z2 OL;L;10.4;61
+!s108 1590045376.175000
+!s107 F:/smart_car/sim/key_tb/key_debounce.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/smart_car/sim/key_tb/key_debounce.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vsel_mode_0
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 >;MjCf<mla:N5_aJPFQV<2
+I9A25]CI8Ue=R_OUnK]PXc3
+R1
+w1590045423
+8F:\smart_car\sim\key_tb\sel_mode_0.v
+FF:\smart_car\sim\key_tb\sel_mode_0.v
+L0 2
+R2
+!s108 1590045429.454000
+!s107 F:\smart_car\sim\key_tb\sel_mode_0.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:\smart_car\sim\key_tb\sel_mode_0.v|
+!i113 0
+R3
+vtb_top_key
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 c:>ZNin[ndBCRz7YLZQR90
+IhSOJTh;_>_oFXSGH8m_912
+R1
+w1590045333
+8F:/smart_car/sim/key_tb/tb_top_key.v
+FF:/smart_car/sim/key_tb/tb_top_key.v
+L0 2
+R2
+!s108 1590045376.545000
+!s107 F:/smart_car/sim/key_tb/tb_top_key.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/smart_car/sim/key_tb/tb_top_key.v|
+!i113 0
+R3
+vtop_key
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 >JSP7KkWf=>ZLL;=gJ:6d3
+IJmI9dI31G9NA9a^gh1T`a0
+R1
+w1590045138
+8F:/smart_car/sim/key_tb/top_key.v
+FF:/smart_car/sim/key_tb/top_key.v
+L0 1
+R2
+!s108 1590045376.715000
+!s107 F:/smart_car/sim/key_tb/top_key.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/smart_car/sim/key_tb/top_key.v|
+!i113 0
+R3

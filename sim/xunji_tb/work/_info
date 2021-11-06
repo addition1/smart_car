@@ -1,0 +1,48 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/smart_car/sim/xunji_tb
+vtb_xunji
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 C3ZBH<3mzdU3RZYQTU`:_2
+IZNen;ZI8>z;4XaMWkM8TQ2
+R0
+w1589080025
+8F:/smart_car/sim/xunji_tb/tb_xunji.v
+FF:/smart_car/sim/xunji_tb/tb_xunji.v
+L0 3
+Z2 OL;L;10.4;61
+!s108 1589080081.014000
+!s107 F:/smart_car/sim/xunji_tb/tb_xunji.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/smart_car/sim/xunji_tb/tb_xunji.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vxunji
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 LalZkIUm>fVJS>3icf^VO3
+IWmzbMHhUY667E]6MHY=cQ2
+R0
+w1589080292
+8F:\smart_car\sim\xunji_tb\xunji.v
+FF:\smart_car\sim\xunji_tb\xunji.v
+L0 1
+R2
+!s108 1589080301.697000
+!s107 F:\smart_car\sim\xunji_tb\xunji.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:\smart_car\sim\xunji_tb\xunji.v|
+!i113 0
+R3

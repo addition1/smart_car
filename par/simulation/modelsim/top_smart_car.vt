@@ -1,0 +1,80 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "05/09/2020 22:53:59"
+                                                                                
+// Verilog Test Bench template for design : top_smart_car
+// 
+// Simulation tool : ModelSim (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module top_smart_car_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg D1;
+reg D2;
+reg D3;
+reg D4;
+reg Echo;
+reg remote_in;
+reg sys_clk;
+reg sys_rst_n;
+// wires                                               
+wire Trig;
+wire [3:0]  led;
+wire [3:0]  motor;
+
+// assign statements (if any)                          
+top_smart_car i1 (
+// port map - connection between master ports and signals/registers   
+	.D1(D1),
+	.D2(D2),
+	.D3(D3),
+	.D4(D4),
+	.Echo(Echo),
+	.Trig(Trig),
+	.led(led),
+	.motor(motor),
+	.remote_in(remote_in),
+	.sys_clk(sys_clk),
+	.sys_rst_n(sys_rst_n)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+                                                       
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

@@ -1,0 +1,48 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dF:/smart_car/sim/xunji_tb
+vpwm
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 AMbCC_M3UGEXl>nJRFh6X2
+I]W2EbN>oJMU5n4Bc2YfiX2
+Z1 dF:/smart_car/sim/pwm_tb
+w1589080726
+8F:/smart_car/sim/pwm_tb/pwm.v
+FF:/smart_car/sim/pwm_tb/pwm.v
+L0 1
+Z2 OL;L;10.4;61
+!s108 1589081408.426000
+!s107 F:/smart_car/sim/pwm_tb/pwm.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/smart_car/sim/pwm_tb/pwm.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vtb_pwm
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 NY]kNXc@1fMR72g3akc5O2
+I@:FQfj`Ia<W]?ShQ7ea:@0
+R1
+w1589108755
+8F:/smart_car/sim/pwm_tb/tb_pwm.v
+FF:/smart_car/sim/pwm_tb/tb_pwm.v
+L0 2
+R2
+!s108 1589108767.190000
+!s107 F:/smart_car/sim/pwm_tb/tb_pwm.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/smart_car/sim/pwm_tb/tb_pwm.v|
+!i113 0
+R3

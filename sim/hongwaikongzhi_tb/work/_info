@@ -1,0 +1,48 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dF:/smart_car/sim/chaoshengbo_tb
+vremote_ctrl
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 ZWfE3ejom2o90FN<9QYD11
+I]dH<Z@14@^`EjHbP?oc_51
+Z1 dF:/smart_car/sim/hongwaikongzhi_tb
+w1589096218
+8F:\smart_car\sim\hongwaikongzhi_tb\remote_ctrl.v
+FF:\smart_car\sim\hongwaikongzhi_tb\remote_ctrl.v
+L0 2
+Z2 OL;L;10.4;61
+!s108 1589096308.148000
+!s107 F:\smart_car\sim\hongwaikongzhi_tb\remote_ctrl.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:\smart_car\sim\hongwaikongzhi_tb\remote_ctrl.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vtb_remote_ctrl
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 e3aTA3?:S3mQ9c:H0?2WI1
+IGba[aAS_ECWnS@KPm5A]S1
+R1
+w1589096505
+8F:\smart_car\sim\hongwaikongzhi_tb\tb_remote_ctrl.v
+FF:\smart_car\sim\hongwaikongzhi_tb\tb_remote_ctrl.v
+L0 3
+R2
+!s108 1589096514.926000
+!s107 F:\smart_car\sim\hongwaikongzhi_tb\tb_remote_ctrl.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:\smart_car\sim\hongwaikongzhi_tb\tb_remote_ctrl.v|
+!i113 0
+R3

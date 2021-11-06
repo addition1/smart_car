@@ -1,0 +1,49 @@
+//****************************************Copyright (c)***********************************//
+//技术支持：www.openedv.com
+//淘宝店铺：http://openedv.taobao.com 
+//关注微信公众平台微信号："正点原子"，免费获取FPGA & STM32资料。
+//版权所有，盗版必究。
+//Copyright(C) 正点原子 2018-2028
+//All rights reserved                                  
+//----------------------------------------------------------------------------------------
+// File name:           key_led
+// Last modified Date:  2018年5月11日14:46:18
+// Last Version:        V1.1
+// Descriptions:        按键控制LED
+//----------------------------------------------------------------------------------------
+// Created by:          正点原子
+// Created date:        
+// Version:             V1.0
+// Descriptions:        The original version
+//
+//----------------------------------------------------------------------------------------
+// Modified by:         正点原子
+// Modified date:       2018/4/24 9:56:36
+// Version:             V1.1
+// Descriptions:        
+//
+//----------------------------------------------------------------------------------------
+//****************************************************************************************//
+
+module key_led(
+    input               sys_clk  ,    //50Mhz系统时钟
+    input               sys_rst_n,    //系统复位，低有效
+    input        [2:0]  key,          //按键输入信号
+    output [12:0] mod
+    );
+reg[12:0]speedmod;
+assign mod=speedmod;
+always @(posedge sys_clk or negedge sys_rst_n) begin
+    if(!sys_rst_n) 
+    speedmod=13'd5000; 
+    else if(key[0]== 0)  //按键1按下时，从右向左的流水灯效果
+     speedmod=13'd1000;
+    else if (key[1]==0)  //按键2按下时，从左向右的流水灯效果
+      speedmod=13'd2000;
+    else if (key[2]==0)  //按键3按下时，LED闪烁
+       speedmod=13'd2500; 
+    else
+        speedmod=13'd5000;  
+end
+
+endmodule 

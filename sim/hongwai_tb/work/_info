@@ -1,0 +1,48 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dd:/modeltech64_10.4/examples
+vremote_rcv
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 Xmz<V<;b?Vkf5]FhPFC752
+IdIcUoz[LQ3>h0geoR>D0K2
+Z1 dF:/smart_car/sim/hongwai_tb
+w1588249261
+8F:/smart_car/sim/hongwai_tb/remote_rcv.v
+FF:/smart_car/sim/hongwai_tb/remote_rcv.v
+L0 21
+Z2 OL;L;10.4;61
+!s108 1589038984.518000
+!s107 F:/smart_car/sim/hongwai_tb/remote_rcv.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/smart_car/sim/hongwai_tb/remote_rcv.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vremote_rcv_tb
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 L0g3F3TA3fZ?bT7^<^^C?3
+I6SdV@ihdah@<Q<6>la3J63
+R1
+w1589038899
+8F:/smart_car/sim/hongwai_tb/remote_rcv_tb.v
+FF:/smart_car/sim/hongwai_tb/remote_rcv_tb.v
+L0 3
+R2
+!s108 1589038984.668000
+!s107 F:/smart_car/sim/hongwai_tb/remote_rcv_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/smart_car/sim/hongwai_tb/remote_rcv_tb.v|
+!i113 0
+R3

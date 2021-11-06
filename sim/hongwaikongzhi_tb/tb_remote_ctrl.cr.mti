@@ -1,0 +1,15 @@
+F:/smart_car/sim/hongwaikongzhi_tb/remote_ctrl.v {1 {vlog -work work -vopt -stats=none {F:\smart_car\sim\hongwaikongzhi_tb\remote_ctrl.v}
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module remote_ctrl
+
+Top level modules:
+	remote_ctrl
+
+} {} {}} F:/smart_car/sim/hongwaikongzhi_tb/tb_remote_ctrl.v {1 {vlog -work work -vopt -stats=none {F:\smart_car\sim\hongwaikongzhi_tb\tb_remote_ctrl.v}
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module tb_remote_ctrl
+
+Top level modules:
+	tb_remote_ctrl
+
+} {} {}}

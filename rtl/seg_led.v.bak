@@ -1,0 +1,77 @@
+//****************************************Copyright (c)***********************************//
+//技术支持：www.openedv.com
+//淘宝店铺：http://openedv.taobao.com
+//关注微信公众平台微信号："正点原子"，免费获取FPGA & STM32资料。
+//版权所有，盗版必究。
+//Copyright(C) 正点原子 2018-2028
+//All rights reserved
+//----------------------------------------------------------------------------------------
+// File name:           seg_led
+// Last modified Date:  2018/3/13 9:03:06
+// Last Version:        V1.0
+// Descriptions:        数码管动态显示模块
+//----------------------------------------------------------------------------------------
+// Created by:          正点原子
+// Created date:        2018/3/13 9:03:09
+// Version:             V1.0
+// Descriptions:        The original version
+//
+//----------------------------------------------------------------------------------------
+//****************************************************************************************//
+
+module seg_led(
+    input                   clk    ,        // 时钟信号
+    input                   rst_n  ,        // 复位信号
+    input         [7:0]     data   ,        // 6位数码管要显示的数值 
+	 input                    pwm,
+	 output     reg     IN4,IN3,IN2,IN1
+	 
+    );
+
+
+always @ (posedge clk or negedge rst_n) begin
+    if (!rst_n)begin
+      IN4<=1'b0;
+		IN3<=1'b0;
+		IN2<=1'b0;
+		IN1<=1'b0;
+		end
+    else begin
+      case (data) 
+		8'd24:begin	
+		IN4<=pwm;
+		IN3<=1'b0;
+		IN2<=1'b0;
+		IN1<=pwm;
+		end
+		8'd82:begin
+		IN4<=1'b0;
+		IN3<=pwm;
+		IN2<=pwm;
+		IN1<=1'b0;
+		end
+		8'd08:begin
+		IN4<=1'b0;
+		IN3<=1'b0;
+		IN2<=1'b0;
+		IN1<=pwm;
+		end
+		8'd90:begin
+		IN4<=pwm;
+		IN3<=1'b0;
+		IN2<=1'b0;
+		IN1<=1'b0;
+		end
+		default:begin
+		IN4<=1'b0;
+		IN3<=1'b0;
+		IN2<=1'b0;
+		IN1<=1'b0;
+		end
+      endcase
+		    end 
+end
+
+
+
+endmodule 

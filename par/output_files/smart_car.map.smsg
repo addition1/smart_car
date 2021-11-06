@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at key_pwm.v(10): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at remote_rcv.v(67): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at Clk_1M.v(9): always construct contains both blocking and non-blocking assignments
